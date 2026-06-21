@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MathWithBird.</title>
+</head>
+<body>
+<h1>Урок 2.</h1>
+<p>Это снова я, Марь Иванович, учитель Математики.<br>
+Всем привет! Я очень рад вас снова видеть!!<br>Вы готовы начать урок?<br>
+Начнём со сложения.</p>
+
+<h2>Сложение чисел.</h2>
+<p>Для того, чтобы сложить числа надо воспользоваться таким методом: складывайте сначала самые большие разряды, потом поменьше, поменьше, и т. д.<br>
+Например:<br>
+897+567=1397+67=1460+7=1467.<br>
+<br>
+<br> 
+Пока! Но перед тем, как попрощаться решите 4 задачи. До встречи!!!</p>
+
+<h2>Тест:</h2>
+<button onclick="checkAnswer(396, 123, 519)">Задача 1</button>
+<button onclick="checkAnswer(456, 367, 823)">Задача 2</button>
+<button onclick="checkAnswer(597, 197, 794)">Задача 3</button>
+<button onclick="checkAnswer(948, 211, 1159)">Задача 4</button>
+
+<script>
+    function checkAnswer(number, n2, correct) {
+        let answer = prompt(`Сколько будет ${number} + ${n2} ?`);
+        if (answer === null) {
+            return;
+        }
+        let num = Number(answer);
+        if (num === correct) {
+            alert("✅ Верно! Молодец!");
+        } else {
+            alert(`❌ Неверно! Правильный ответ: ${correct}`);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MathWithBird.</title>
+</head>
+<body>
+<h1>Введение.</h1>
+<p>Привет! Меня зовут Господин Марь Иванович! Приятно познакомиться!<br>
+Я учитель математики (на этом курсе, разумеется)!<br>
+Вы готовы начать урок?<br>
+Начнём с умножения на 11.</p>
+
+<h2>Умножения двузначных чисел на 11.</h2>
+<p>Для умножения на 11 вам потребуется написать заданное число и между двумя его составляющими цифрами написать их сумму.<br>
+45×11=4_5<br>
+4+5=9<br>
+45×11=495.<br>
+<br>
+А если так?!!<br>
+89×11=...<br>
+Не получается? Сейчас разберёмся почему:<br>
+89×11=8_9<br>
+8+9=17. Но ответ не равен 8179...<br>
+Переносим 10 из 17 на 8 и получаем 979.<br>
+Пока! Но перед тем, как попрощаться решите 4 задачи. До встречи!!!</p>
+
+<h2>Тест:</h2>
+<button onclick="checkAnswer(36, 396)">Задача 1</button>
+<button onclick="checkAnswer(42, 462)">Задача 2</button>
+<button onclick="checkAnswer(53, 583)">Задача 3</button>
+<button onclick="checkAnswer(67, 737)">Задача 4</button>
+
+<script>
+    function checkAnswer(number, correct) {
+        let answer = prompt(`Сколько будет ${number} × 11 ?`);
+        if (answer === null) {
+            return;
+        }
+        let num = Number(answer);
+        if (num === correct) {
+            alert("✅ Верно! Молодец!");
+        } else {
+            alert(`❌ Неверно! Правильный ответ: ${correct}`);
+        }
+    }
+</script>
+</body>
+</html>

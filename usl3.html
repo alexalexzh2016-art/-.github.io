@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MathWithBird.</title>
+</head>
+<body>
+<h1>Урок 3.</h1>
+<p>Приветствую всех! Это снова я, Марь Иванович, учитель Математики.<br>
+Я очень рад вас снова видеть!!<br>Вы готовы начать наш сегодняшний урок?<br>
+Давайте начнём!</p>
+
+<h2>Умножение чисел.</h2>
+<p>Давайте разберёмся на примере:<br>123×45=?<br>123×40(4920) + 123×5(615) = 5535.
+Поняли? Надо умножать сначала на больший разряд, на меньший, меньший, до самого маленького.
+Ещё:<br>
+348×15=348×10 (3480) + 348×5 (1740).<br>
+<br>
+<br> 
+До свидания! Но перед тем, как попрощаться решите 4 задачи. До встречи!!!</p>
+
+<h2>Тест:</h2>
+<button onclick="checkAnswer(396, 12, 4752)">Задача 1</button>
+<button onclick="checkAnswer(456, 50, 22800)">Задача 2</button>
+<button onclick="checkAnswer(555, 55, 30525)">Задача 3</button>
+<button onclick="checkAnswer(345, 13, 4485)">Задача 4</button>
+
+<script>
+    function checkAnswer(number, n2, correct) {
+        let answer = prompt(`Сколько будет ${number} × ${n2} ?`);
+        if (answer === null) {
+            return;
+        }
+        let num = Number(answer);
+        if (num === correct) {
+            alert("✅ Верно! Молодец!");
+        } else {
+            alert(`❌ Неверно! Правильный ответ: ${correct}`);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MathWithBird.</title>
+</head>
+<body>
+<h1>Урок 1.</h1>
+<p>Привет! Это снова я, М. Иванович, учитель Математики.<br>
+Я учитель математики (повторяю тем, кто прослушал)!<br>
+Вы готовы начать урок?<br>
+Начнём с вычитания.</p>
+
+<h2>Вычитание чисел.</h2>
+<p>Для вычитания чисел надо воспользоваться таким методом: вычитайте сначала самый большой разряд, потом поменьше, поменьше, и т. д.<br>
+Например:<br>
+897-567=397-67=337-7=330.<br>
+<br>
+<br> 
+Пока! Но перед тем, как попрощаться решите 4 задачи. До встречи!!!</p>
+
+<h2>Тест:</h2>
+<button onclick="checkAnswer(396, 123, 273)">Задача 1</button>
+<button onclick="checkAnswer(456, 367, 89)">Задача 2</button>
+<button onclick="checkAnswer(597, 197, 400)">Задача 3</button>
+<button onclick="checkAnswer(948, 211, 737)">Задача 4</button>
+
+<script>
+    function checkAnswer(number, n2, correct) {
+        let answer = prompt(`Сколько будет ${number} - ${n2} ?`);
+        if (answer === null) {
+            return;
+        }
+        let num = Number(answer);
+        if (num === correct) {
+            alert("✅ Верно! Молодец!");
+        } else {
+            alert(`❌ Неверно! Правильный ответ: ${correct}`);
+        }
+    }
+</script>
+</body>
+</html>

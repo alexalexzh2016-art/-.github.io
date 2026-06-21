@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MathWithBird.</title>
+</head>
+<body>
+<h1>Урок 4.</h1>
+<p>Новая встреча! Здрасте! Это я, Марь Иванович, учитель Математики.<br>
+Я очень рад вас снова видеть!!<br>Начнём урок?<br>
+Ответ: да-а-а-а-а-а-а-а-а!</p>
+
+<h2>Деление чисел.</h2>
+<p>Разберёмся на примере:<br>1245:567=?<br>Ищем наибольшее число которое делится на 567, но меньше 1245. Подбором. 567×2=1134. 567×3=1701. Уже больше... Значит это равно 2. Ищем остаток: 1245-1134=111.<br>
+Поняли?<br>
+<br>
+Тогда прощаемся...
+<br>
+<br> 
+До свидания! Но перед тем, как попрощаться решите 4 задачи. До встречи!!!</p>
+
+<h2>Тест:</h2>
+<button onclick="checkAnswer(5535, 45, 123)">Задача 1</button>
+<button onclick="checkAnswer(2635, 85, 31)">Задача 2</button>
+<button onclick="checkAnswer(6050, 55, 110)">Задача 3</button>
+<button onclick="checkAnswer(338, 13, 26)">Задача 4</button>
+
+<script>
+    function checkAnswer(number, n2, correct) {
+        let answer = prompt(`Сколько будет ${number} : ${n2} ?`);
+        if (answer === null) {
+            return;
+        }
+        let num = Number(answer);
+        if (num === correct) {
+            alert("✅ Верно! Молодец!");
+        } else {
+            alert(`❌ Неверно! Правильный ответ: ${correct}.`);
+        }
+    }
+</script>
+</body>
+</html>
